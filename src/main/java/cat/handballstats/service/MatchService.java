@@ -79,7 +79,13 @@ public class MatchService {
 	// Delete matches
 	public void deleteMatches(List<Long> idsList) {
 		for (int i = 0; i < idsList.size(); i++) {
-			this.deleteMatch(idsList.get(i));
+			Match match = this.getMatch(idsList.get(i));
+			for(int j = 0; j < match.getPlayers().size(); j++) {
+				Player player = match.getPlayers().get(j);
+				match.getPlayers().remove(player);
+				player.getMatches().remove(match);
+			}
+			this.deleteMatch(match.getId());
 		}
 	}
 

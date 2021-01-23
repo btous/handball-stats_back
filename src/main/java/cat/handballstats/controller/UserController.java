@@ -30,7 +30,7 @@ public class UserController {
 	}
 
 	// Login
-	@PostMapping("users/login")
+	@PostMapping("/users/login")
 	public User loginUser(@RequestBody String userData) throws Exception {
 		JSONObject obj = new JSONObject(userData);
 		String email = obj.getString("email");

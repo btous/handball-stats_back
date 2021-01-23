@@ -52,7 +52,7 @@ public class Match {
 	@Column
 	@JsonManagedReference(value="match-action")
 	private List<Action> actions = new ArrayList<Action>();
-	@ManyToMany(mappedBy="matches", cascade = CascadeType.ALL)
+	@ManyToMany(mappedBy="matches")
 	@Column
 	private List<Player> players = new ArrayList<Player>();
 	

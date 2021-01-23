@@ -75,7 +75,7 @@ public class MatchController {
 	}
 	
 	// Delete matches
-	@DeleteMapping("/matches/")
+	@DeleteMapping("/matches")
 	public String deleteMatches(@RequestBody List<Long> idsList) {
 		service.deleteMatches(idsList);
 		return gson.toJson("Matches deleted");

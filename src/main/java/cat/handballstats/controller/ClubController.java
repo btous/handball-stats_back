@@ -59,7 +59,7 @@ public class ClubController {
 	}
 	
 	// Delete clubs
-	@DeleteMapping("/clubs/")
+	@DeleteMapping("/clubs")
 	public String deleteClubs(@RequestBody List<Long> idsList) {
 		service.deleteClubs(idsList);
 		return gson.toJson("Clubs deleted");

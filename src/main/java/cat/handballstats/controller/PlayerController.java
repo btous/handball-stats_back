@@ -69,7 +69,7 @@ public class PlayerController {
 	}
 	
 	// Delete players
-	@DeleteMapping("/players/")
+	@DeleteMapping("/players")
 	public String deletePlayers(@RequestBody List<Long> idsList) {
 		service.deletePlayers(idsList);
 		return gson.toJson("Players deleted");
