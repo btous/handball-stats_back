@@ -1,6 +1,5 @@
 package cat.handballstats.controller;
 
-import java.util.List;
 import java.util.UUID;
 
 import org.json.JSONObject;
