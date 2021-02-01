@@ -42,11 +42,11 @@ public class UserController {
 		}
 	}
 
-	// Get users
-	@GetMapping("/users")
-	public List<User> getUsers() {
-		return service.getUsers();
-	}
+	// Get users (permetria a qualsevol atacant veure les dades de tots els usuaris)
+//	@GetMapping("/users")
+//	public List<User> getUsers() {
+//		return service.getUsers();
+//	}
 
 	// Get user
 	@GetMapping("/users/{id}")
